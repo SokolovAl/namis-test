@@ -1,6 +1,6 @@
 import {Box, Button, Chip, Divider, Drawer, Stack, Typography} from "@mui/material";
 import type {CrmGridRow} from "../pages/crm/crmGrid.types"; // поправь путь под свой src
-import {directionChipColor, statusChipColor} from "../pages/crm/crmGrid.utils";
+import {directionChipColor, formatDate, statusChipColor} from "../pages/crm/crmGrid.utils";
 
 type Props = {
     open: boolean;
@@ -48,15 +48,15 @@ export function CrmRowDetailsDrawer({open, row, onClose}: Props) {
 
                     <Field label="Наименование" value={row?.name}/>
                     <Field label="ИНН" value={row?.inn}/>
-                    <Field label="Дата регистрации" value={row?.registrationDate}/>
+                    <Field label="Дата регистрации" value={row ? formatDate(row.registrationDate) : "-"}/>
 
                     <Divider/>
 
                     <Field label="Ответственный" value={row?.responsible}/>
                     <Field label="Тип документов" value={row?.documentType}/>
                     <Field label="Тип объектов" value={row?.objectType}/>
-                    <Field label="Запрос счетов" value={row?.invoicesRequest}/>
-                    <Field label="Счета выставлены" value={row?.invoicesIssuedAt}/>
+                    <Field label="Запрос счетов" value={row ? formatDate(row.invoicesRequest) : "-"}/>
+                    <Field label="Счета выставлены" value={row ? formatDate(row.invoicesIssuedAt) : "-"}/>
                     <Field label="Контроль" value={row?.control}/>
                     <Field label="Замечания" value={row?.remarks}/>
 

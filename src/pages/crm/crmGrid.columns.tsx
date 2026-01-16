@@ -3,7 +3,7 @@ import type {GridColDef} from "@mui/x-data-grid";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import type {CrmGridRow} from "./crmGrid.types";
 import {EllipsisTooltipCell} from "../../components/EllipsisTooltipCell";
-import {directionChipColor, formatRub, statusChipColor} from "./crmGrid.utils";
+import {directionChipColor, formatDate, formatRub, statusChipColor} from "./crmGrid.utils";
 
 type CreateColumnsArgs = {
     onOpenDetails: (row: CrmGridRow) => void;
@@ -99,6 +99,7 @@ export function createCrmColumns({onOpenDetails}: CreateColumnsArgs): GridColDef
             headerName: "Дата регистрации",
             width: 150,
             sortable: true,
+            valueFormatter: (value) => formatDate(value as Date | null),
         },
         {
             field: "actions",
