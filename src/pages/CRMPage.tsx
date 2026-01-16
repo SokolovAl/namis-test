@@ -32,7 +32,6 @@ export function CRMPage() {
                         disableRowSelectionOnClick
                         pageSizeOptions={[10, 20, 50]}
                         sortingOrder={["asc", "desc"]}
-                        onRowClick={(params) => setDetailsRow(params.row)}
                         initialState={{
                             pagination: {paginationModel: {pageSize: 20, page: 0}},
                             sorting: {sortModel: [{field: "requestNo", sort: "asc"}]},
@@ -46,6 +45,9 @@ export function CRMPage() {
                             },
                             "& .MuiDataGrid-row:hover": {backgroundColor: "rgba(0,0,0,0.03)"},
                             "& .MuiDataGrid-row:nth-of-type(even)": {backgroundColor: "rgba(0,0,0,0.015)"},
+                            "& .MuiDataGrid-cell:has(button):hover": {
+                                backgroundColor: "rgba(0,0,0,0.04)"
+                            }
                         }}
                     />
                 </Box>
