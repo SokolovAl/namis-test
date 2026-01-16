@@ -116,7 +116,7 @@ export function createCrmColumns({onOpenDetails}: CreateColumnsArgs): GridColDef
                         size="small"
                         aria-label="Открыть детали"
                         onClick={(e) => {
-                            e.stopPropagation(); // чтобы не было двойного открытия по rowClick
+                            e.stopPropagation();
                             onOpenDetails(params.row);
                         }}
                     >
