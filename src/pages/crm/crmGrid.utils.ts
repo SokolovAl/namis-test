@@ -1,4 +1,4 @@
-import type {CrmRow} from "../../mocks/data.ts";
+import type {CrmRow} from "../../mocks/types.ts";
 
 export function formatRub(value: number): string {
     return new Intl.NumberFormat("ru-RU", {

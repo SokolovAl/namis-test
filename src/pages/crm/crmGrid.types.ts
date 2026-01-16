@@ -1,3 +1,3 @@
-import type {CrmRow} from "../../mocks/data.ts";
+import type {CrmRow} from "../../mocks/types.ts";
 
 export type CrmGridRow = CrmRow & { id: number };
