@@ -34,8 +34,10 @@ export function CRMPage() {
                     <DataGrid
                         rows={rows}
                         columns={crmColumns}
+                        disableColumnMenu
                         disableRowSelectionOnClick
                         pageSizeOptions={[10, 20, 50]}
+                        sortingOrder={["asc", "desc"]}
                         initialState={{
                             pagination: {paginationModel: {pageSize: 20, page: 0}},
                             sorting: {sortModel: [{field: "requestNo", sort: "desc"}]},
