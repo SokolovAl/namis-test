@@ -45,6 +45,27 @@ export const crmColumns: GridColDef<CrmGridRow>[] = [
         ),
     },
     {
+        field: "invoicesRequest",
+        headerName: "Запрос счетов",
+        width: 140,
+        sortable: true,
+        renderCell: (params) => <EllipsisTooltipCell value={params.value} mutedIfDash />,
+    },
+    {
+        field: "invoicesIssuedAt",
+        headerName: "Счета выставлены",
+        width: 150,
+        sortable: true,
+        renderCell: (params) => <EllipsisTooltipCell value={params.value} mutedIfDash />,
+    },
+    {
+        field: "responsible",
+        headerName: "Ответственный",
+        width: 160,
+        sortable: true,
+        renderCell: (params) => <EllipsisTooltipCell value={params.value} mutedIfDash />,
+    },
+    {
         field: "kfVvPaid",
         headerName: "КФ ВВ оплачено",
         width: 150,
@@ -79,6 +100,20 @@ export const crmColumns: GridColDef<CrmGridRow>[] = [
         align: "right",
         headerAlign: "right",
         valueFormatter: (value) => formatRub(Number(value ?? 0)),
+    },
+    {
+        field: "documentType",
+        headerName: "Тип документов",
+        width: 180,
+        sortable: true,
+        renderCell: (params) => <EllipsisTooltipCell value={params.value} mutedIfDash />,
+    },
+    {
+        field: "control",
+        headerName: "Контроль",
+        width: 200,
+        sortable: false,
+        renderCell: (params) => <EllipsisTooltipCell value={params.value} mutedIfDash />,
     },
     {
         field: "objectType",

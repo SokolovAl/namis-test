@@ -18,7 +18,7 @@ export function EllipsisTooltipCell({value, mutedIfDash}: Props) {
                     textOverflow: "ellipsis",
                     whiteSpace: "nowrap",
                     width: "100%",
-                    color: mutedIfDash && text === "—" ? "text.secondary" : "text.primary",
+                    color: mutedIfDash && text === "-" ? "text.secondary" : "text.primary",
                 }}
             >
                 {text}

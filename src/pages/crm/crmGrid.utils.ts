@@ -1,4 +1,4 @@
-import type {CrmRow} from "../../mocks/mockData";
+import type {CrmRow} from "../../mocks/data.ts";
 
 export function formatRub(value: number): string {
     return new Intl.NumberFormat("ru-RU", {
@@ -12,9 +12,9 @@ export function directionChipColor(
     direction: CrmRow["direction"]
 ): "default" | "primary" | "success" | "warning" {
     switch (direction) {
-        case "ЦФО":
+        case "ЦСО":
             return "warning";
-        case "СЗП":
+        case "ССП":
             return "primary";
         case "ИГС":
             return "success";

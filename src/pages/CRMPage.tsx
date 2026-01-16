@@ -1,7 +1,7 @@
 import {Box, Paper} from "@mui/material";
 import {DataGrid} from "@mui/x-data-grid";
 import {TableToolbar} from "../components/TableToolbar";
-import {crmRows} from "../mocks/mockData";
+import {crmRows} from "../mocks/data.ts";
 
 import {crmColumns} from "./crm/crmGrid.columns";
 import {toCrmGridRows} from "./crm/crmGrid.rows";
