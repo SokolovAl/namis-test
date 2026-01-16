@@ -15,7 +15,6 @@ export function TableToolbar() {
                 p: 1.5,
             }}
         >
-            {/* Поиск */}
             <TextField
                 size="small"
                 label="Поиск"
