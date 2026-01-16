@@ -10,11 +10,27 @@ export function CRMPage() {
     const rows = toCrmGridRows(crmRows);
 
     return (
-        <Box sx={{p: 2}}>
-            <Paper sx={{overflow: "hidden"}}>
+        <Box
+            sx={{
+                p: 2,
+                height: "100%",
+                display: "flex",
+                flexDirection: "column",
+                minHeight: 0,
+            }}
+        >
+            <Paper
+                sx={{
+                    overflow: "hidden",
+                    flex: 1,
+                    display: "flex",
+                    flexDirection: "column",
+                    minHeight: 0,
+                }}
+            >
                 <TableToolbar/>
 
-                <Box sx={{height: 620}}>
+                <Box sx={{flex: 1, minHeight: 0}}>
                     <DataGrid
                         rows={rows}
                         columns={crmColumns}
