@@ -14,13 +14,13 @@ export function createCrmColumns({onOpenDetails}: CreateColumnsArgs): GridColDef
         {
             field: "requestNo",
             headerName: "№ заявки",
-            width: 90,
+            width: 100,
             sortable: true,
         },
         {
             field: "direction",
             headerName: "Направление",
-            width: 130,
+            width: 110,
             sortable: true,
             renderCell: (params) => (
                 <Chip size="small" label={params.value} color={directionChipColor(params.value)}/>
@@ -30,14 +30,14 @@ export function createCrmColumns({onOpenDetails}: CreateColumnsArgs): GridColDef
             field: "name",
             headerName: "Наименование",
             flex: 1,
-            minWidth: 280,
+            minWidth: 120,
             sortable: true,
             renderCell: (params) => <EllipsisTooltipCell value={params.value}/>,
         },
         {
             field: "inn",
             headerName: "ИНН",
-            width: 140,
+            width: 120,
             sortable: true,
             renderCell: (params) => (
                 <Box
@@ -60,7 +60,7 @@ export function createCrmColumns({onOpenDetails}: CreateColumnsArgs): GridColDef
         {
             field: "kfOdoPaid",
             headerName: "КФ ОДО оплачено",
-            width: 170,
+            width: 150,
             type: "number",
             align: "right",
             headerAlign: "right",
@@ -69,7 +69,7 @@ export function createCrmColumns({onOpenDetails}: CreateColumnsArgs): GridColDef
         {
             field: "chvPaid",
             headerName: "ЧВ оплачено",
-            width: 140,
+            width: 150,
             type: "number",
             align: "right",
             headerAlign: "right",
@@ -88,7 +88,7 @@ export function createCrmColumns({onOpenDetails}: CreateColumnsArgs): GridColDef
         {
             field: "status",
             headerName: "Статус заявки",
-            width: 230,
+            width: 200,
             sortable: true,
             renderCell: (params) => (
                 <Chip size="small" label={params.value} color={statusChipColor(params.value)}/>
@@ -97,14 +97,14 @@ export function createCrmColumns({onOpenDetails}: CreateColumnsArgs): GridColDef
         {
             field: "registrationDate",
             headerName: "Дата регистрации",
-            width: 150,
+            width: 200,
             sortable: true,
             valueFormatter: (value) => formatDate(value as Date | null),
         },
         {
             field: "actions",
             headerName: "Детали",
-            width: 56,
+            width: 80,
             sortable: false,
             filterable: false,
             disableColumnMenu: true,
